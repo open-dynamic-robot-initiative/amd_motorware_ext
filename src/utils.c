@@ -1,6 +1,6 @@
 #include <amd_motorware_ext/utils.h>
 
-_iq removePositionOffset(_iq position, _iq offset, _iq pos_max)
+_iq UTILS_removePositionOffset(_iq position, _iq offset, _iq pos_max)
 {
 	// Remove offset in a way that preserves the range and does not exceed the
 	// max. value in subterms of the calculations (which would cause integer
@@ -40,7 +40,7 @@ _iq removePositionOffset(_iq position, _iq offset, _iq pos_max)
 }
 
 
-_iq computeTorque_Nm(EST_Handle estHandle, MATH_vec2 Idq_pu,
+_iq UTILS_computeTorque_Nm(EST_Handle estHandle, MATH_vec2 Idq_pu,
 		const _iq torque_Flux_sf, const _iq torque_Ls_sf)
 {
   _iq Flux_pu = EST_getFlux_pu(estHandle);

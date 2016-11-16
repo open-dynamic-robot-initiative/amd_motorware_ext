@@ -23,14 +23,14 @@ extern "C" {
 //! \param pos_max The maximum position.  When going beyond that value, the
 //!                position rolls over to -max_pos.
 //! \returns Position with offset removed.
-_iq removePositionOffset(_iq position, _iq offset, _iq pos_max);
+_iq UTILS_removePositionOffset(_iq position, _iq offset, _iq pos_max);
 
 
 //! \brief Computes Torque in Nm
 //!
 //! This is a modified version of the function from user.c which does not need a
 //! CTRL_Handle.
-_iq computeTorque_Nm(EST_Handle estHandle, MATH_vec2 Idq_pu,
+_iq UTILS_computeTorque_Nm(EST_Handle estHandle, MATH_vec2 Idq_pu,
 		const _iq torque_Flux_sf, const _iq torque_Ls_sf);
 
 
